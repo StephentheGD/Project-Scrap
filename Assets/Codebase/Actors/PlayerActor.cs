@@ -23,6 +23,8 @@ public class PlayerActor : MonoBehaviour
     
     /// <summary> Whether or not the actor is currently facing right </summary>
     private bool isFacingRight = false;
+
+    [SerializeField] private Weapon equippedWeapon = null;
     
     /// <summary>
     /// Start callback
@@ -96,6 +98,13 @@ public class PlayerActor : MonoBehaviour
         {
             if (nearestInteractionPoint != null)
                 nearestInteractionPoint.Interact();
+        }
+
+        // Handle weapon inputs
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (equippedWeapon != null)
+                equippedWeapon.Use();
         }
     }
 }

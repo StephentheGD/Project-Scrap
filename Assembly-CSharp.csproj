@@ -48,13 +48,16 @@
   <ItemGroup>
     <Compile Include="Assets\Codebase\UI\MainMenuCanvas.cs" />
     <Compile Include="Assets\Codebase\Actors\Animators\ActorWheelRotator.cs" />
+    <Compile Include="Assets\Codebase\Actors\Handlers\DamageHandler.cs" />
     <Compile Include="Assets\Codebase\Core\GameManager.cs" />
     <Compile Include="Assets\Codebase\Interactions\InteractionScrapPile.cs" />
     <Compile Include="Assets\Codebase\UI\ScrapheapStatusCanvas.cs" />
     <Compile Include="Assets\Codebase\UI\Vendor\VendorCanvas.cs" />
     <Compile Include="Assets\Codebase\UI\FactoryStatusCanvas.cs" />
     <Compile Include="Assets\Codebase\UI\Vendor\VendorStockElement.cs" />
+    <Compile Include="Assets\Codebase\Projectile.cs" />
     <Compile Include="Assets\Codebase\Interactions\IInteractable.cs" />
+    <Compile Include="Assets\Codebase\Weapon.cs" />
     <Compile Include="Assets\Codebase\Interactions\InteractionPoint.cs" />
     <Compile Include="Assets\Codebase\UI\Canvas.cs" />
     <Compile Include="Assets\Codebase\Actors\Animators\ActorPartWobble.cs" />
