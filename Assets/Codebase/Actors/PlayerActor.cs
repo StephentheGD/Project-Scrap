@@ -24,6 +24,7 @@ public class PlayerActor : MonoBehaviour
     /// <summary> Whether or not the actor is currently facing right </summary>
     private bool isFacingRight = false;
 
+    /// <summary> The Actor's currently equipped weapon </summary>
     [SerializeField] private Weapon equippedWeapon = null;
     
     /// <summary>
