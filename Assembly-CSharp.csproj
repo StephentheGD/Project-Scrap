@@ -70,10 +70,12 @@
     <Compile Include="Assets\Codebase\Core\Loader.cs" />
     <Compile Include="Assets\Codebase\Interactions\InteractionScrapRefiner.cs" />
     <Compile Include="Assets\Codebase\SimpleCameraTracker.cs" />
+    <Compile Include="Assets\Codebase\UI\Healthbar\Healthbar.cs" />
     <Compile Include="Assets\Codebase\UI\IOpenable.cs" />
     <Compile Include="Assets\Codebase\UI\PauseCanvas.cs" />
     <Compile Include="Assets\Codebase\Core\GameState.cs" />
     <Compile Include="Assets\Codebase\Interactions\InteractionDialogue.cs" />
+    <Compile Include="Assets\Codebase\UI\Healthbar\HealthbarCanvas.cs" />
     <Compile Include="Assets\Codebase\Core\Singleton.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

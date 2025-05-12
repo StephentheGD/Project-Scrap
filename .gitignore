@@ -3,3 +3,6 @@ Library/ArtifactDB-lock
 /Library/Artifacts
 /Library
 /obj
+/Logs
+/Temp
+/UserSettings
