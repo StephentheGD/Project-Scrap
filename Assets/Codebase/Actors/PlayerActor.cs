@@ -39,6 +39,20 @@ public class PlayerActor : Actor
         if (Input.GetKey(KeyCode.S))
             movementVector += Vector3.back;
         
+        // Handle pointing weapon at cursor
+        Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(mouseRay, out RaycastHit hit, 100f))
+        {
+            Vector3 direction = hit.point - transform.position;
+            
+            // Zero the y-axis, then normalise, THEN apply original y to correctly place on ring around player
+            direction.y = 0f;
+            direction = direction.normalized;
+            direction.y = equippedWeapon.transform.position.y;
+            
+            equippedWeapon.transform.localPosition = direction;
+        }
+        
         // Handle Interaction Points
         float shortestDistance = Mathf.Infinity;
         InteractionPoint nearestInteractionPoint = null;
@@ -67,10 +81,7 @@ public class PlayerActor : Actor
 
         // Handle weapon inputs
         if (Input.GetKeyDown(KeyCode.Q))
-        {
-            if (equippedWeapon != null)
-                equippedWeapon.Use();
-        }
+            UseWeapon();
         
         base.Update();
     }

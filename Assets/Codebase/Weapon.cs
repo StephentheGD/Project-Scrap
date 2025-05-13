@@ -16,4 +16,14 @@ public class Weapon : MonoBehaviour
     {
         Projectile projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
     }
+
+    /// <summary>
+    /// Triggers the use of the weapon, creating a projectile in the direction specified
+    /// </summary>
+    /// <param name="direction">Normalised direction for the projectile to use</param>
+    public void Use(Vector3 direction)
+    {
+        Projectile projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        projectile.Setup(direction);
+    }
 }

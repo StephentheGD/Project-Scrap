@@ -56,4 +56,21 @@ public abstract class Actor : MonoBehaviour
         // Reset movementVector
         movementVector = Vector3.zero;
     }
+
+    /// <summary>
+    /// Uses the equipped weapon if one is available
+    /// </summary>
+    protected void UseWeapon()
+    {
+        if (!equippedWeapon)
+            return;
+        
+        // Get weapon attack direction
+        Vector3 direction = equippedWeapon.transform.position - transform.position;
+        direction.y = 0f;
+        direction = direction.normalized;
+        
+        // Actually use weapon
+        equippedWeapon.Use(direction);
+    }
 }

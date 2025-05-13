@@ -9,14 +9,14 @@ public class ActorWheelRotator : MonoBehaviour
     /// <summary> The base speed at which the wheel should rotate </summary>
     [SerializeField] private float rotateSpeed = 1f;
     /// <summary> The Actor to use when calculating the rotate speed </summary>
-    private PlayerActor actor;
+    private Actor actor;
     
     /// <summary>
     /// Start callback
     /// </summary>
     private void Start()
     {
-        actor = GetComponentInParent<PlayerActor>();
+        actor = GetComponentInParent<Actor>();
     }
 
     /// <summary>

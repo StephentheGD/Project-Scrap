@@ -71,6 +71,7 @@
     <Compile Include="Assets\Codebase\UI\DialogueCanvas.cs" />
     <Compile Include="Assets\Codebase\Interactions\InteractionSwitchScene.cs" />
     <Compile Include="Assets\Codebase\Core\Loader.cs" />
+    <Compile Include="Assets\Codebase\UI\CrosshairCanvas.cs" />
     <Compile Include="Assets\Codebase\Interactions\InteractionScrapRefiner.cs" />
     <Compile Include="Assets\Codebase\SimpleCameraTracker.cs" />
     <Compile Include="Assets\Codebase\UI\Healthbar\Healthbar.cs" />
