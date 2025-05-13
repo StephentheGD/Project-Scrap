@@ -24,11 +24,31 @@ public class PlayerActor : Actor
     /// </summary>
     private void Update()
     {
+        // Don't do anything if currently in dialogue
         if (DialogueCanvas.Instance)
             if (DialogueCanvas.Instance.IsOpen)
                 return;
 
         // Handle Movement
+        HandleMovement();
+        
+        // Handle pointing weapon at cursor
+        HandleAiming();
+        
+        // Handle Interaction Points
+        HandleInteractions();
+
+        // Handle weapon inputs
+        HandleWeapon();
+        
+        base.Update();
+    }
+
+    /// <summary>
+    /// Handles all functions related to movement
+    /// </summary>
+    private void HandleMovement()
+    {
         // TODO: Create a PlayerInput class and receive input through the Unity Input System
         if (Input.GetKey(KeyCode.A))
             movementVector += Vector3.left;
@@ -38,22 +58,38 @@ public class PlayerActor : Actor
             movementVector += Vector3.forward;
         if (Input.GetKey(KeyCode.S))
             movementVector += Vector3.back;
+    }
+
+    /// <summary>
+    /// Handles all functions related to aiming
+    /// </summary>
+    private void HandleAiming()
+    {
+        if (!equippedWeapon) 
+            return;
         
-        // Handle pointing weapon at cursor
         Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(mouseRay, out RaycastHit hit, 100f))
-        {
-            Vector3 direction = hit.point - transform.position;
-            
-            // Zero the y-axis, then normalise, THEN apply original y to correctly place on ring around player
-            direction.y = 0f;
-            direction = direction.normalized;
-            direction.y = equippedWeapon.transform.position.y;
-            
-            equippedWeapon.transform.localPosition = direction;
-        }
+        if (!Physics.Raycast(mouseRay, out RaycastHit hit, 100f, LayerMask.GetMask("Aim"))) 
+            return;
         
-        // Handle Interaction Points
+        Debug.DrawRay(hit.point, Vector3.up, Color.green);
+        Vector3 direction = hit.point - transform.position;
+        Debug.DrawRay(transform.position, direction, Color.red);
+        
+        // Zero the y-axis, then normalise, THEN apply original y to correctly place on ring around player
+        direction.y = 0f;
+        direction = direction.normalized;
+        direction.y = equippedWeapon.transform.position.y;
+            
+        equippedWeapon.transform.localPosition = direction;
+        Debug.DrawRay(equippedWeapon.transform.position, direction, Color.blue);
+    }
+    
+    /// <summary>
+    /// Handles all functions related to interaction
+    /// </summary>
+    private void HandleInteractions()
+    {
         float shortestDistance = Mathf.Infinity;
         InteractionPoint nearestInteractionPoint = null;
         foreach (var point in InteractionPoint.Instances)
@@ -73,16 +109,19 @@ public class PlayerActor : Actor
         }
 
         // Handle interact inputs
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (nearestInteractionPoint != null)
-                nearestInteractionPoint.Interact();
-        }
-
-        // Handle weapon inputs
-        if (Input.GetKeyDown(KeyCode.Q))
-            UseWeapon();
+        if (!Input.GetKeyDown(KeyCode.E)) 
+            return;
         
-        base.Update();
+        if (nearestInteractionPoint != null)
+            nearestInteractionPoint.Interact();
+    }
+
+    /// <summary>
+    /// Handles all functions related to using weapons
+    /// </summary>
+    private void HandleWeapon()
+    {
+        if (Input.GetMouseButtonDown(0))
+            UseWeapon();
     }
 }

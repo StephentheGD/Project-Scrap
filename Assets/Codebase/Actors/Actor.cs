@@ -16,10 +16,12 @@ public abstract class Actor : MonoBehaviour
     [Header("Actor")]
     [SerializeField] protected GameObject visuals = null;
     
+    /// <summary> Speed at which the actor should move </summary>
+    [SerializeField] protected float moveSpeed = 3f;
     /// <summary> Speed at which the actor should move horizontally </summary>
-    [SerializeField] protected float horizontalMoveSpeed = 1f;
+    protected float horizontalMoveSpeed => moveSpeed;
     /// <summary> Speed at which the actor should move vertically </summary>
-    [SerializeField] protected float verticalMoveSpeed = 1f;
+    protected float verticalMoveSpeed => moveSpeed * Utils.DEPTH_SCALE;
 
     /// <summary> The Actor's currently equipped weapon </summary>
     [SerializeField] protected Weapon equippedWeapon = null;

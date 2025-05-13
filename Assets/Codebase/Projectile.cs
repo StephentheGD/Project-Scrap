@@ -21,6 +21,7 @@ public class Projectile : MonoBehaviour
     /// <param name="direction">Normalised direction the projectile should move</param>
     public void Setup(Vector3 direction)
     {  
+        direction.z *= Utils.DEPTH_SCALE;
         this.direction = direction;
     }
     

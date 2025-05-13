@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1815349015096146936}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2938647443407739882}
   - component: {fileID: 3327106773254103473}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4874569227073671764}
   - component: {fileID: 7324107150485915356}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Right Arm Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4522178058196119955}
   - component: {fileID: 1546732958292256131}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Connector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8293084937589844437}
   - component: {fileID: 6508696040486860115}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Connector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1751616316867748929}
   - component: {fileID: 6454236710969024863}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,8 +347,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visuals: {fileID: 6545835562792112628}
-  horizontalMoveSpeed: 3
-  verticalMoveSpeed: 10
+  moveSpeed: 3
+  equippedWeapon: {fileID: 0}
   maxInteractionDistance: 2
 --- !u!1 &1372761378411751464
 GameObject:
@@ -359,7 +359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8974116173671833395}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1633593464296674644}
   - component: {fileID: 3291204605087149314}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wheel Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,7 +479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2747411368793141834}
   - component: {fileID: 3703480655532252740}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Connector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -528,7 +528,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7525351997070607606}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Right Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -562,7 +562,7 @@ GameObject:
   - component: {fileID: 966341031333621538}
   - component: {fileID: 6258372548553037635}
   - component: {fileID: 1509383263343844407}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wheel Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2968185711d1741a39666640c1dfe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 60000
+  rotateSpeed: 250
 --- !u!1 &5787052505118729134
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,7 +662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3930857888297313052}
   - component: {fileID: 1373107910649244674}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Connector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -708,7 +708,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2268846229303252982}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,7 +740,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5472048040327806370}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wheel Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -773,7 +773,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6226044149014322012}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -806,7 +806,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8106052365088297848}
   - component: {fileID: 4438742923073239684}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chest Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -893,7 +893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8912440006522659432}
   - component: {fileID: 1243954570596816000}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Left Arm Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -980,7 +980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5514599893434884359}
   - component: {fileID: 3445844827385704551}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Connector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1026,7 +1026,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2538801413388938486}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Left Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
