@@ -56,10 +56,12 @@
     <Compile Include="Assets\Codebase\UI\FactoryStatusCanvas.cs" />
     <Compile Include="Assets\Codebase\UI\Vendor\VendorStockElement.cs" />
     <Compile Include="Assets\Codebase\Projectile.cs" />
+    <Compile Include="Assets\Codebase\Actors\EnemyActor.cs" />
     <Compile Include="Assets\Codebase\Interactions\IInteractable.cs" />
     <Compile Include="Assets\Codebase\Weapon.cs" />
     <Compile Include="Assets\Codebase\ScrapheapManager.cs" />
     <Compile Include="Assets\Codebase\Interactions\InteractionPoint.cs" />
+    <Compile Include="Assets\Codebase\Actors\Actor.cs" />
     <Compile Include="Assets\Codebase\UI\Canvas.cs" />
     <Compile Include="Assets\Codebase\Actors\Animators\ActorPartWobble.cs" />
     <Compile Include="Assets\Codebase\Actors\PlayerActor.cs" />
